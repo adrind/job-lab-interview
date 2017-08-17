@@ -9,11 +9,11 @@ $(function () {
            $('.correct.suggestion-box').show().find('.suggestion-text').html(text);
            $('.btn-answer').addClass('disabled');
            $el.addClass('correct-answer');
-           ga('send', 'event', 'answer', 'correct', questionText, text);
+           ga('send', 'event', 'answer', 'correct', questionText);
        } else {
            $('.incorrect.suggestion-box').show().find('.suggestion-text').html(text);
            $('.incorrect').show();
-           ga('send', 'event', 'answer', 'wrong', questionText, text);
+           ga('send', 'event', 'answer', 'wrong', questionText);
        }
    });
 
