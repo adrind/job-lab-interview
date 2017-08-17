@@ -3,13 +3,20 @@ $(function () {
        var $el = $(evt.target),
            text = $el.parent().find('.suggestion').text();
 
-       $('.suggestion-box').show().find('.suggestion-text').html(text);
-       $('.btn-answer').prop('disabled', true);
+       if($el.data('is-correct') === 'True') {
+           $('.incorrect').hide();
+           $('.correct.suggestion-box').show().find('.suggestion-text').html(text);
+           $('.btn-answer').addClass('disabled');
+       } else {
+           $('.incorrect.suggestion-box').show().find('.suggestion-text').html(text);
+           $('.incorrect').show();
+       }
+
    });
 
    $('.btn-repeat').click(function (evt) {
        var $el = $(evt.target);
-       $('.btn-answer').prop('disabled', false);
+       $('.btn-answer').removeClass('disabled');
 
        $('.suggestion-box').hide();
    });

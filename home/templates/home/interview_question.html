@@ -10,14 +10,21 @@
         <div class="col">
         {% for answer in page.answers %}
             <div class="answer">
-                <button class="btn btn-lg btn-answer" style="min-width:400px;margin-bottom:25px;">{{ answer.value.answer }}</button>
+                <a class="btn btn-lg btn-answer" style="min-width:400px;margin-bottom:25px;" href="#" data-is-correct="{{ answer.value.is_correct }}">{{ answer.value.answer }}</a>
                 <p class="suggestion" style="display: none;">{{ answer.value.suggestion }}</p>
             </div>
         {% endfor %}
         </div>
     </div>
 
-    <div class="row suggestion-box text-center" style="display: none">
+    <div class="row suggestion-box incorrect text-center" style="display: none">
+        <p><span class="icon-cross incorrect-answer-icon"></span> <span class="incorrect-answer-text"><strong>Sorry!</strong> That's not the best answer, why don't you try again?</span>  <span class="icon-arrow-up2 incorrect-answer-icon"></span> </p>
+        <div class="suggestion-text" style="width: 100%;"></div>
+    </div>
+
+
+    <div class="row suggestion-box correct text-center" style="display: none">
+        <p><span class="icon-checkmark correct-answer-icon"></span> <span class="incorrect-answer-text">Correct!</span></p>
         <div class="suggestion-text" style="width: 100%;"></div>
         <div class="suggestion-btns text-center">
             <a class="btn btn-warning btn-repeat">Repeat Question</a>

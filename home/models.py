@@ -16,6 +16,7 @@ class HomePage(Page):
 class AnswerBlock(blocks.StructBlock):
     answer = blocks.CharBlock(required=True, max_length=510)
     suggestion = blocks.CharBlock(max_length=1120, required=True)
+    is_correct = blocks.BooleanBlock(required=False, default=False, help_text='Is this the correct answer to the question?')
 
     class Meta:
         icon = 'user'

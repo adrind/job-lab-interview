@@ -37,7 +37,9 @@
 .contact-icon,
 .contact-email,
 .language-icon,
-.language-text {
+.language-text,
+.incorrect-answer-icon,
+.incorrect-answer-text {
     display: inline-block;
     vertical-align: middle;
 }
@@ -63,11 +65,16 @@ p {
     color: #071C49;
 }
 
-.btn-answer,
+.btn.btn-answer,
 .suggestion-btns a,
 .btn-start {
     background-color: #071C49;
-    color: #FFCC33
+    color: #FFCC33;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 .btn-answer:hover,
