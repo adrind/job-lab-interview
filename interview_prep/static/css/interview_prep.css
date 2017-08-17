@@ -1,5 +1,7 @@
 .container {
     color: #071C49;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .header {
@@ -12,6 +14,7 @@
     line-height: 85px;
     margin-left: 25px;
     padding-top: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .header-title a,
@@ -34,12 +37,8 @@
     margin-top: 50px;
 }
 
-.contact-icon,
-.contact-email,
-.language-icon,
-.language-text,
-.incorrect-answer-icon,
-.incorrect-answer-text {
+.icon,
+.text-icon {
     display: inline-block;
     vertical-align: middle;
 }
@@ -66,7 +65,6 @@ p {
 }
 
 .btn.btn-answer,
-.suggestion-btns a,
 .btn-start {
     background-color: #071C49;
     color: #FFCC33;
@@ -78,10 +76,16 @@ p {
 }
 
 .btn-answer:hover,
-.suggestion-btns a,
+.btn-bottom,
 .btn-start:hover {
     background-color: #FFCC33;
     color: #071C49;
+    cursor: pointer;
+}
+
+.btn-bottom:hover {
+    background-color: #071C49;
+    color: #FFCC33;
     cursor: pointer;
 }
 
@@ -89,6 +93,13 @@ p {
 .btn-answer:hover:disabled {
     background-color: #071C49;
     color: #FFCC33;
+    cursor: default;
+}
+
+.correct-answer.btn-answer:disabled,
+.correct-answer.btn-answer {
+    background-color: #FFCC33;
+    color: #071C49;
     cursor: default;
 }
 

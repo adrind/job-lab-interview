@@ -7,6 +7,7 @@ $(function () {
            $('.incorrect').hide();
            $('.correct.suggestion-box').show().find('.suggestion-text').html(text);
            $('.btn-answer').addClass('disabled');
+           $el.addClass('correct-answer');
        } else {
            $('.incorrect.suggestion-box').show().find('.suggestion-text').html(text);
            $('.incorrect').show();
@@ -16,7 +17,7 @@ $(function () {
 
    $('.btn-repeat').click(function (evt) {
        var $el = $(evt.target);
-       $('.btn-answer').removeClass('disabled');
+       $('.btn-answer').removeClass('disabled correct-answer');
 
        $('.suggestion-box').hide();
    });

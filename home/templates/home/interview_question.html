@@ -18,24 +18,33 @@
     </div>
 
     <div class="row suggestion-box incorrect text-center" style="display: none">
-        <p><span class="icon-cross incorrect-answer-icon"></span> <span class="incorrect-answer-text"><strong>Sorry!</strong> That's not the best answer, why don't you try again?</span>  <span class="icon-arrow-up2 incorrect-answer-icon"></span> </p>
+        <p><span class="icon-cross incorrect-answer-icon icon"></span> <span class="text-icon"><strong>Sorry!</strong> </span></p>
+        <p><span class="text-icon">That's not the best answer, why don't you try again?</span><span class="icon-grin incorrect-answer-icon icon ml-2"></span> </p>
         <div class="suggestion-text" style="width: 100%;"></div>
     </div>
 
 
     <div class="row suggestion-box correct text-center" style="display: none">
-        <p><span class="icon-checkmark correct-answer-icon"></span> <span class="incorrect-answer-text">Correct!</span></p>
+        <p><span class="icon-checkmark icon"></span> <span class="text-icon"><strong>Correct!</strong></span></p>
         <div class="suggestion-text" style="width: 100%;"></div>
-        <div class="suggestion-btns text-center">
-            <a class="btn btn-warning btn-repeat">Repeat Question</a>
+        <div class="suggestion-btns text-center mt-2 mb-4">
             {% if page.next_question %}
-                <a class="btn btn-warning btn-next-question" href="{{ page.next_question.url }}">Next Question</a>
+                <button class="btn btn-lg btn-bottom btn-repeat">
+                    <span class="text-icon"><span class="icon-loop2 icon mr-2"></span>Repeat Question</span>
+                </button>
+                <a class="btn btn-lg btn-bottom" href="{{ page.next_question.url }}">
+                    <span class="text-icon">Next Question <span class="icon icon-arrow-right2"></span></span>
+                </a>
             {% endif %}
 
             {% if not page.next_question %}
-                <div class="row text-center">
-                    <p>Congrats! You finished the interview test. Hopefully you feel a bit more prepared to go to that interview</p>
-                </div>
+                <p>
+                    <span class="text-icon">Congratulations! You finished the interview test</span><span class="icon-clipboard ml-2"></span>
+                </p>
+                <p>Hopefully you feel a bit more prepared to go to that interview</p>
+                <a class="btn btn-lg btn-bottom" href="/">
+                    <span class="text-icon"><span class="icon-loop2 icon mr-2"></span>Repeat Test</span>
+                </a>
             {% endif %}
         </div>
     </div>
