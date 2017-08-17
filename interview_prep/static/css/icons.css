@@ -51,6 +51,15 @@
 .icon-loop2:before {
   content: "\ea2e";
 }
+.icon-arrow-up2:before {
+  content: "\ea3a";
+}
 .icon-arrow-right2:before {
   content: "\ea3c";
+}
+.icon-arrow-down2:before {
+  content: "\ea3e";
+}
+.icon-arrow-left2:before {
+  content: "\ea40";
 }

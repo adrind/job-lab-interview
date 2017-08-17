@@ -12,11 +12,17 @@
     <div class="row text-center start">
         <a href="{{ page.first_question.url }}" class="btn btn-lg btn-start">Start now! </a>
     </div>
-
-    <div class="language">
-        <span class="language-text"> Want to change the language? Click here </span>
-        <span class="icon-arrow-right2 language-icon"></span>
-    </div>
+    <p class="language">
+        <div class="language-text"> Do you want to change the language?</div>
+        <span class="icon-arrow-down2 language-icon"></span>
+        <div id="google_translate_element" class="mt-2"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </p>
 
     <p class="contact-text">
         Have any questions or want to learn about the library Job Lab?
