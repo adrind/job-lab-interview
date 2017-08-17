@@ -1,0 +1,80 @@
+.header {
+    height: 100px;
+    background-color: #071C49;
+}
+
+.header-title {
+    height: 100px;
+    line-height: 85px;
+    margin-left: 25px;
+    padding-top: 15px;
+}
+
+.header-title a,
+.header-title a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.start {
+    width: 100%;
+}
+
+.contact-text,
+.language {
+    margin-top: 50px;
+}
+
+.contact-icon,
+.contact-email,
+.language-icon,
+.language-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-start {
+    width: 400px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.suggestion-text,
+.suggestion-btns {
+    width: 100%;
+}
+
+p {
+    width: 100%;
+    color: #071C49;
+}
+
+.h2-heading {
+    color: #071C49;
+}
+
+.btn-answer,
+.suggestion-btns a,
+.btn-start {
+    background-color: #071C49;
+    color: #FFCC33
+}
+
+.btn-answer:hover,
+.suggestion-btns a,
+.btn-start:hover {
+    background-color: #FFCC33;
+    color: #071C49;
+    cursor: pointer;
+}
+
+.btn-answer:disabled,
+.btn-answer:hover:disabled {
+    background-color: #071C49;
+    color: #FFCC33;
+    cursor: default;
+}
+
+.suggestion-box a {
+    display: inline-block;
+}

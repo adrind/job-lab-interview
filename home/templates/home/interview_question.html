@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="question-text h2-heading">{{ page.question }}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        {% for answer in page.answers %}
+            <div class="answer">
+                <button class="btn btn-lg btn-answer" style="min-width:400px;margin-bottom:25px;">{{ answer.value.answer }}</button>
+                <p class="suggestion" style="display: none;">{{ answer.value.suggestion }}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <div class="row suggestion-box text-center" style="display: none">
+        <div class="suggestion-text" style="width: 100%;"></div>
+        <div class="suggestion-btns text-center">
+            <a class="btn btn-warning btn-repeat">Repeat Question</a>
+            {% if page.next_question %}
+                <a class="btn btn-warning btn-next-question" href="{{ page.next_question.url }}">Next Question</a>
+            {% endif %}
+
+            {% if not page.next_question %}
+                <div class="row text-center">
+                    <p>Congrats! You finished the interview test. Hopefully you feel a bit more prepared to go to that interview</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

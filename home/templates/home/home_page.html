@@ -3,9 +3,27 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    <h1>Welcome to your new Wagtail site!</h1>
+    <h2 class="h2-heading">Welcome to the Job Lab's Practice Interview!</h2>
 
-    <p>You can access the admin interface <a href="{% url 'wagtailadmin_home' %}">here</a> (make sure you have run "./manage.py createsuperuser" in the console first).</p>
+    <p class="mt-4">
+        Go through some common interview questions and learn how to pick the right responses.
+        This practice will help you prepare for the real interview!
+    </p>
+    <div class="row text-center start">
+        <a href="{{ page.first_question.url }}" class="btn btn-lg btn-start">Start now! </a>
+    </div>
 
-    <p>If you haven't already given the documentation a read, head over to <a href="http://docs.wagtail.io/">http://docs.wagtail.io</a> to start building on Wagtail</p>
+    <div class="language">
+        <span class="language-text"> Want to change the language? Click here </span>
+        <span class="icon-arrow-right2 language-icon"></span>
+    </div>
+
+    <p class="contact-text">
+        Have any questions or want to learn about the library Job Lab?
+    </p>
+    <p>
+        <span class="icon-email-2 mr-2 contact-icon" style="font-size: 28px"></span>
+        <span class="contact-email"> Email Sarah McBryde: <a href="mailto:mcbrydes@ci.anchorage.ak.us">mcbrydes@ci.anchorage.ak.us</a></span>
+    </p>
+
 {% endblock %}
