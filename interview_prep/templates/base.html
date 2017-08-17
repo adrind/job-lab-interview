@@ -1,4 +1,4 @@
-{% load static wagtailuserbar %}
+{% load static %}
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -36,8 +36,6 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
-
         <header class="header">
             <h1 class="header-title">
                 <a href="/"> <span class="icon-job-center mr-4"></span>Job Lab Interview Practice</a>
