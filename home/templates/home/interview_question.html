@@ -10,7 +10,7 @@
         <div class="col">
         {% for answer in page.answers %}
             <div class="answer">
-                <a class="btn btn-lg btn-answer" style="min-width:400px;margin-bottom:25px;" href="#" data-is-correct="{{ answer.value.is_correct }}">{{ answer.value.answer }}</a>
+                <a class="btn btn-lg btn-answer" href="#" data-is-correct="{{ answer.value.is_correct }}">{{ answer.value.answer }}</a>
                 <p class="suggestion" style="display: none;">{{ answer.value.suggestion }}</p>
             </div>
         {% endfor %}
